@@ -4,6 +4,7 @@ OUTTEMP="Practical_temp.pdf"
 PDFLISTFILE="pdf_list.txt"
 
 echo "--- Run create_html_files.py"
+pipenv install
 pipenv run python ./create_html_files.py
 echo
 
@@ -13,7 +14,7 @@ echo
 
 echo "--- Move the PDFs"
 echo "wait..."; sleep 5 # wait for the file to arrive in the Web Recipts folder
-mv -v "~/Documents/Web Receipts/" $PDFDIR
+mv -v ~/"Documents/Web Receipts/" $PDFDIR
 
 echo "--- Make and move starting PDF to '$OUTFILE'"
 ./print_in_safari.sh 'https://practicaltypography.com/'
